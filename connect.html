@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Интернет-магазин одежды</title>
+	<link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="connect.css">
+	<script defer src="bm.js"></script>
+</head>
+<body>
+	<div class=cont>
+		<div class=header>
+			<ul class=hmenu>
+				<li><a href="index.html">Магазин одежды</a>
+				<li><a href="page2.html">Женщинам</a>
+				<li><a href="page3.html">Мужчинам</a>
+			</ul>
+		</div>
+		<div class=nav>
+			<span>Магазин одежды</span>
+			<div class="burger" id="burger">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
+			</div>
+			<ul class=vmenu>
+				<li><a href=#aktsii >Акции</a></li>
+				<li><a href=#novinki >Новинки</a></li>
+				<li><a href=#dostavka >Условия доставки</a></li>
+				<li><a href="connect.html" >Обратная связь</a></li>
+			</ul>
+		</div>
+		<div id="message"></div>
+		<script>
+			const form = document.querySelector('form');
+			const messageDiv = document.getElementById('message');
+
+			form.addEventListener('submit', function(event) {
+				event.preventDefault();
+				messageDiv.textContent = 'Вы отправили данные';
+				messageDiv.style.display = 'block'; // Показываем сообщение
+			});
+		</script>
+		<div class=content>
+			<form action="action_form_new.php" method="post">
+                <h2>Форма обратной связи</h2>
+                <fieldset>
+                  <label for="lastname">Фамилия:</label>
+                  <input type="text" name="lastname" id="lastname">
+                </fieldset>
+              
+                <fieldset>
+                  <label for="firstname">Имя, Отчество:</label>
+                  <input type="text" name="firstname" id="firstname" required>
+                </fieldset>
+              
+                <fieldset>
+                  <label for="answer">Внесите Ваши предложения по улучшению нашей работы:</label>
+                  <textarea name="answer" id="answer" rows="5" cols="50" required></textarea>
+                </fieldset>
+                <input type="submit" value="Отправить">
+              </form>
+			</div>
+		<p><a href="#top">Наверх</a></p>
+		<div class="footer">
+			<b>Разработчик: </b><span>команда группы 2011/1</span><br>
+			<b>Адрес:</b><span>ТГАСУ, г. Томск, пл. Соляная, 2</span><br>
+			<b>e-mail:</b> <span>ggg@tsuab.ru</span>
+		</div>
+	</div>
+</body>
+</html>
